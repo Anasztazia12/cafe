@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Quayside Coffee</title>
+  <script src="https://cdn.jsdelivr.net/gh/StockoL/looseleaf-ui@v2.5.1/dist/theme.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/StockoL/looseleaf-ui@v2.5.1/dist/looseleaf.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/gh/StockoL/looseleaf-ui@v2.5.1/dist/looseleaf.js" defer></script>
+</head>
+<body>
+  <svg hidden>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" /></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></symbol>
+  </svg>
+
+  <header class="navbar" data-sticky data-glass>
+    <div class="wrapper">
+      <div class="cluster" style="--cluster-justify: space-between;">
+        <a href="#" class="navbar__brand">☕ Quayside Coffee</a>
+        <details class="navbar__toggle">
+          <summary aria-label="Menu"><svg class="icon"><use href="#icon-menu" /></svg></summary>
+        </details>
+        <nav class="navbar__menu">
+          <a href="#menu" class="navbar__link" data-underline="slide">Menu</a>
+          <a href="#prices" class="navbar__link" data-underline="slide">Prices</a>
+          <a href="#faq" class="navbar__link" data-underline="slide">FAQ</a>
+          <a href="#book" class="navbar__link" data-underline="slide">Book a table</a>
+          <button class="button" data-variant="ghost" data-theme-toggle>
+            <span data-theme-icons>
+              <svg class="icon" data-theme-icon="light"><use href="#icon-sun" /></svg>
+              <svg class="icon" data-theme-icon="dark"><use href="#icon-moon" /></svg>
+            </span>
+            <span data-theme-label>Auto</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="region">
+      <div class="wrapper">
+        <div class="grid hero">
+          <div class="flow">
+            <div class="cluster">
+              <span class="badge" data-status="success" data-pulse>Open now</span>
+              <span class="badge" data-status="info">Dog friendly</span>
+            </div>
+            <h1>Coffee by the harbour, baked fresh every morning.</h1>
+            <p class="text-muted">Small batch roasts, homemade cakes and a sea view. Pop in or book a table for the weekend.</p>
+            <div class="cluster">
+              <a class="button" data-variant="primary" href="#book">Book a table</a>
+              <a class="button" data-variant="secondary" href="#menu">See the menu</a>
+            </div>
+          </div>
+          <img class="hero-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=70" alt="Coffee on a table">
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper">
+      <div class="alert" data-status="warning">
+        <div class="cluster" style="--cluster-justify: space-between;">
+          <p><strong>Bank holiday:</strong> we close at 2pm on Monday.</p>
+          <button class="alert__close" aria-label="Close"><svg class="icon"><use href="#icon-close" /></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="region" id="menu">
+      <div class="wrapper flow">
+        <h2>Today's favourites</h2>
+        <div class="grid" style="--grid-min-item-size: 15rem;">
+          <div class="card" data-interactive>
+            <span class="badge" data-status="success" data-placement="floating">New</span>
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=70" alt="Flat white">
+            <div class="card__body flow">
+              <h3>Flat white</h3>
+              <p class="text-muted">Double ristretto, silky milk.</p>
+            </div>
+          </div>
+          <div class="card" data-interactive>
+            <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600&q=70" alt="Cinnamon bun">
+            <div class="card__body flow">
+              <h3>Cinnamon bun</h3>
+              <p class="text-muted">Baked at 7am, gone by noon.</p>
+            </div>
+          </div>
+          <div class="card" data-interactive>
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=70" alt="Iced latte">
+            <div class="card__body flow">
+              <h3>Iced latte</h3>
+              <p class="text-muted">Oat milk at no extra cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="region bg-surface-sunken" id="prices">
+      <div class="wrapper flow">
+        <h2>Prices</h2>
+        <div class="tabs">
+          <nav class="tabs__list">
+            <a class="tabs__tab" href="#coffee">Coffee</a>
+            <a class="tabs__tab" href="#food">Food</a>
+          </nav>
+          <section class="tabs__panel" id="coffee">
+            <div class="table-wrapper">
+              <table class="table" data-striped data-hover>
+                <tr><th>Drink</th><th data-align="end">Regular</th><th data-align="end">Large</th></tr>
+                <tr><td>Espresso</td><td data-align="end">£2.40</td><td data-align="end">£2.90</td></tr>
+                <tr><td>Flat white</td><td data-align="end">£3.30</td><td data-align="end">£3.80</td></tr>
+                <tr><td>Latte</td><td data-align="end">£3.40</td><td data-align="end">£3.90</td></tr>
+                <tr><td>Hot chocolate</td><td data-align="end">£3.20</td><td data-align="end">£3.70</td></tr>
+              </table>
+            </div>
+          </section>
+          <section class="tabs__panel" id="food">
+            <div class="table-wrapper">
+              <table class="table" data-striped data-hover>
+                <tr><th>Item</th><th data-align="end">Price</th></tr>
+                <tr><td>Cinnamon bun</td><td data-align="end">£3.20</td></tr>
+                <tr><td>Sourdough toastie</td><td data-align="end">£6.50</td></tr>
+                <tr><td>Carrot cake</td><td data-align="end">£3.80</td></tr>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="region" id="faq">
+      <div class="wrapper flow">
+        <h2>Questions</h2>
+        <div class="accordion faq">
+          <details class="accordion__item" name="faq" open>
+            <summary class="accordion__trigger">Do you have vegan options? <svg class="icon accordion__icon"><use href="#icon-chevron" /></svg></summary>
+            <div class="accordion__content"><p>Yes, oat and soy milk, plus two vegan cakes every day.</p></div>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__trigger">Can I bring my dog? <svg class="icon accordion__icon"><use href="#icon-chevron" /></svg></summary>
+            <div class="accordion__content"><p>Of course. Water bowls and treats are by the door.</p></div>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__trigger">Is there parking? <svg class="icon accordion__icon"><use href="#icon-chevron" /></svg></summary>
+            <div class="accordion__content"><p>The quay car park is two minutes away.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="region bg-surface-sunken" id="book">
+      <div class="wrapper">
+        <div class="card booking">
+          <form class="card__body flow" id="booking-form">
+            <h2>Book a table</h2>
+            <div class="field">
+              <label for="name">Name</label>
+              <input class="input" id="name" required>
+            </div>
+            <div class="field">
+              <label for="people">People</label>
+              <select class="select" id="people">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="note">Anything we should know?</label>
+              <textarea class="textarea" id="note" rows="3" placeholder="Birthday, high chair, allergies..."></textarea>
+              <span class="field__hint">Optional.</span>
+            </div>
+            <fieldset class="fieldset">
+              <legend class="legend">Seat</legend>
+              <div class="choice-group">
+                <label class="choice"><input class="choice__input" type="radio" name="seat" checked> Inside</label>
+                <label class="choice"><input class="choice__input" type="radio" name="seat"> Terrace</label>
+              </div>
+            </fieldset>
+            <div>
+              <label class="choice" data-variant="switch"><input class="choice__input" type="checkbox" role="switch"><span class="choice__thumb"></span> Text me a reminder</label>
+            </div>
+            <div>
+              <button class="button" type="submit" data-variant="primary" data-size="large">Book my table</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="thanks">
+    <div class="flow">
+      <h3>Table booked 🎉</h3>
+      <p>Thanks! We've saved your table and will see you soon.</p>
+      <div class="cluster" style="--cluster-justify: flex-end;">
+        <button class="button" data-variant="primary" id="close">Lovely</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

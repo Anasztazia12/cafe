@@ -1,0 +1,25 @@
+:root {
+  --color-action: #7a2fe0;
+  --color-action-hover: #6322c0;
+  --color-action-text: #fff;
+}
+
+.hero {
+  --grid-min-item-size: 22rem;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.faq {
+  max-width: 44rem;
+}
+
+.booking {
+  max-width: 40rem;
+}
